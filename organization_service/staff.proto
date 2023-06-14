@@ -13,8 +13,9 @@ message Staff{
     string login = 5;
     string password = 6;
     string staff_type = 7;
-    string created_at = 8;
-    string updated_at = 9;
+    string magazin_id = 8;
+    string created_at = 9;
+    string updated_at = 10;
 }
 
 message CreateStaff{
@@ -24,6 +25,7 @@ message CreateStaff{
     string login = 4;
     string password = 5;
     string staff_type = 6;
+    string magazin_id = 7;
 }
 
 message UpdateStaff{
