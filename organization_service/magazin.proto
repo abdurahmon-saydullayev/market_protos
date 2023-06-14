@@ -9,6 +9,8 @@ message Magazin{
     string id = 1;
     string name = 2;
     string filial_id = 3;
+    string created_at = 4;
+    string updated_at = 5;
 }
 
 message CreateMagazin{

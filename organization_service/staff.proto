@@ -13,6 +13,8 @@ message Staff{
     string login = 5;
     string password = 6;
     string staff_type = 7;
+    string created_at = 8;
+    string updated_at = 9;
 }
 
 message CreateStaff{
