@@ -36,6 +36,7 @@ message UpdateStaff{
     string login = 5;
     string password = 6;
     string staff_type = 7;
+    string magazin_id = 8;
 }
 
 message UpdatePatchStaff{ 
