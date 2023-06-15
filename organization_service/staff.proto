@@ -35,8 +35,8 @@ message UpdateStaff{
     string phone = 4;
     string login = 5;
     string password = 6;
-    string staff_type = 7;
-    string magazin_id = 8;
+    string magazin_id = 7;
+    string staff_type = 8;
 }
 
 message UpdatePatchStaff{ 
