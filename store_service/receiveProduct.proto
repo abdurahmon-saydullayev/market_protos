@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package store_service;
+
+option go_package = "genproto/store_service";
+
+message ReceiveProduct {
+    string id = 1;
+    string product_description = 2;
+    string barcode = 3;
+    int32 count = 4;
+    float price = 5;
+    string receive_table_id = 6;
+    string created_at = 7;
+    string updated_at = 8;
+}
+
+message AddProduct {
+    string product_description = 1;
+    string barcode = 2;
+    string count = 3;
+    string receive_table_id = 4;
+} 
+
+message ProductPK {
+    string id = 1;
+}

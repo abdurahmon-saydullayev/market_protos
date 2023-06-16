@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package product_service;
+
+option go_package = "genproto/product_service";
+import "receive.proto";
+import "google/protobuf/empty.proto";
+
+service ReceiveService {
+    rpc Create (CreateReceive) returns (Receive);
+    rpc GetByID (ReceivePK) returns (Receive);
+    rpc GetList(GetListReceiveRequest) returns (GetListReceiveResponse);
+    rpc Update(UpdateReceive) returns (Receive);
+    rpc UpdatePatch(UpdatePatchReceive) returns (Receive);
+    rpc Delete(ReceivePK) returns (google.protobuf.Empty);
+}

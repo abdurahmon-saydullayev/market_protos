@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package store_service;
+option go_package = "genproto/store_service";
+import "receiveProduct.proto";
+import "google/protobuf/empty.proto";
+
+
+service ReceiveService {
+    rpc Create(AddProduct) returns (ReceiveProduct);
+    rpc Delete(ProductPK) returns (google.protobuf.Empty);
+}

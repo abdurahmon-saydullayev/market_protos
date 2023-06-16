@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package store_service;
+
+option go_package = "genproto/store_service";
+import "google/protobuf/struct.proto";
+
+message Receive{
+    string id = 1;
+    string receive_id = 2;
+    string filial_id = 3;
+    string provider_id = 4;
+    int32 status = 5; // 0- on progress, 1- done
+    string created_at = 6;
+    string updated_at = 7;
+}
+
+message CreateReceive{
+    string filial_id = 1;
+    string provider_id = 2;
+}
+
+message UpdateReceive{
+    string id = 1;
+    string filial_id = 2;
+    string provider_id = 3;
+    int32 status = 4; 
+}
+
+message UpdatePatchReceive{ 
+    string id = 1;
+    google.protobuf.Struct fields = 2;
+}
+
+message GetListReceiveRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+message GetListReceiveResponse {
+    int64 count = 1;
+    repeated Receive receives = 2;
+}
+
+message ReceivePK{
+    string id = 1;
+}
