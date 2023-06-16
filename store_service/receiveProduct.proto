@@ -17,9 +17,8 @@ message ReceiveProduct {
 
 message AddProduct {
     string product_description = 1;
-    string barcode = 2;
-    string count = 3;
-    string receive_table_id = 4;
+    string count = 2;
+    string receive_table_id = 3;
 } 
 
 message ProductPK {
