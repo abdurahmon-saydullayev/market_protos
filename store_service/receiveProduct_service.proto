@@ -6,7 +6,7 @@ import "receiveProduct.proto";
 import "google/protobuf/empty.proto";
 
 
-service ReceiveService {
+service ReceiveProductService {
     rpc Create(AddProduct) returns (ReceiveProduct);
     rpc Delete(ProductPK) returns (google.protobuf.Empty);
 }
